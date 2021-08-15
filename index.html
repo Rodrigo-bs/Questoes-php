@@ -16,7 +16,7 @@
       <nav class="menu-nav">
         <ul>
           <li><a href="#questao1">Questão 1</a></li>
-          <li><a href="#">Questão 2</a></li>
+          <li><a href="#questao2">Questão 2</a></li>
           <li><a href="#">Questão 3</a></li>
           <li><a href="#">Questão 4</a></li>
           <li><a href="#">Questão 5</a></li>
@@ -68,14 +68,66 @@
     </div>
   </section>
 
-  <!-- <section class="questao-2 questoes" id="questao2">
+  <section class="questao-2 questoes" id="questao2">
     <div class="container">
       <h1>Questão 2</h1>
       <p>Baseado no código HTML abaixo, crie uma página com código em linguagem PHP que recupere os dados enviados pelo link e verifique se o número inicial (nr_i) é menor que o número final (nr_f), caso não seja, escreva na tela a seguinte mensagem “O intervalo é inválido!” e pare a execução do programa, caso contrário, então imprima os números ímpares na cor verde e o pares na cor azul.</p>
       <p>Formatados dentro de uma tabela HTML com 5 colunas e com o número de linhas suficiente para preencher todos os valores do intervalo. Ao Final, da impressão dos números apresente a diferença entre a soma dos números pares e ímpares</p>
 
+      <p>Vamos criar um arquivo chamado index.html, ele será responsável por conter o nosso link que disponibilizará os dados necessários.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex1.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Já em outro arquivo com o nome de "lista.php", vamos resgatar esses valores e realizar a verificação.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex2.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Agora basta obter o valor de linhas necessárias para preencher a tabela, para isso devemos subtrair o valor final pelo valor inicial e dividir pelo número de colunas.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex3.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Tendo esse valor basta fazermos um loop pela variável $valorVoltas, dentro desse loop teremos outro, que será responsável por verificar se o último número mais 1 é menor que o valor da variável $valorFinal, assim garantindo que estaremos dentro do intervalo.</p>
+      <p>Dentro dessa verificação vamos salvar o número atual na variável $ultimoNumero.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex4.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Agora basta fazer a fazer a verificação se o número é par ou ímpar e imprimi-lo com a respectiva cor.</p>
+      <p class="aviso">Lembrando que para sabermos se um número é par basta verificar se o resto da divisão por 2 é igual a 0.</p>
+
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex5.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Aplicando o devido CSS e usando valores menores como exemplo, temos: </p>
+      <img src="./img/ex-inter-1.PNG" class="saida">
+      <p>Perceba que o intervalo de 10 a 50 é 11, 12, 13..., 48 e 49.</p>
     </div>
-  </section> -->
+
+  </section>
 
 </body>
 </html>
