@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+header {
+    background: linear-gradient(95.29deg, #0A3871 0%, #051933 98.03%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .menu-nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+header .menu-nav li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.questoes {
+    margin-top: 20px;
+}
+
+.questoes h1 {
+    font-size: 32px;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.questoes p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.questoes p a {
+    color: #005F74;
+}
+
+.code-variavel {
+    display: flex;
+    margin: 10px 0 40px 0;
+}
+
+.code-variavel button {
+    padding: 10px 15px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    max-height: 49px;
+}
+
+.code-variavel button:hover {
+    background: #f1f2f9;
+}
+

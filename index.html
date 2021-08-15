@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tags.css">
+  <title>Questões</title>
+</head>
+<body>
+  <header> 
+    <div class="container">
+      <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="Logo" title="PHP"></a>
+
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="#questao1">Questão 1</a></li>
+          <li><a href="#">Questão 2</a></li>
+          <li><a href="#">Questão 3</a></li>
+          <li><a href="#">Questão 4</a></li>
+          <li><a href="#">Questão 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="questao-1 questoes" id="questao1">
+    <div class="container">
+      <h1>Questão 1</h1>
+      <p>Analise o conteúdo da variável $a (string), a qual apresenta um padrão de texto onde as palavras são separadas na linha pelo caracter (*) e nas colunas pelo caracter (;). Elabore um código na linguagem PHP que extraia o conteúdo desta variável e apresente a saída formatada em uma tabela HTML. Dica: utilize a função explode() do PHP.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <pre>$a = <string-php>'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web'</string-php>;</pre>
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Como está sendo sugerido na alternativa, devemos usar o método <a href="https://www.php.net/manual/en/function.explode.php">explode()</a> do php, vamos começar com o que ela faz. Essa função é responsável por dividir uma string em diferentes partes, determinada por um caractere divisor, o método leva dois argumentos sendo ambos do tipo string, esses argumentos são o caractere divisor e a string que será dividida.</p>
+
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q1-ex1.PNG" alt="exemplo q1">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Saida: </p>
+      <img src="./img/ex-var-1.PNG" alt="img-saida-var1" class="saida">
+
+      <p>Agora que temos as linhas, basta que em cada uma delas possamos aplicar o explode() e formar dentro de uma tabela, faremos isso usando o foreach(). </p>
+
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q1-ex2.PNG" alt="exemplo q1">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Saida: </p>
+      <img src="./img/ex-var-2.PNG" alt="ex saida 2" class="saida">
+
+      <p>Agora vamos aplicar um pouco de css e temos isso: </p>
+      <img src="./img/ex-var-3.PNG" alt="ex saida 3" class="saida">
+    </div>
+  </section>
+
+  <!-- <section class="questao-2 questoes" id="questao2">
+    <div class="container">
+      <h1>Questão 2</h1>
+      <p>Baseado no código HTML abaixo, crie uma página com código em linguagem PHP que recupere os dados enviados pelo link e verifique se o número inicial (nr_i) é menor que o número final (nr_f), caso não seja, escreva na tela a seguinte mensagem “O intervalo é inválido!” e pare a execução do programa, caso contrário, então imprima os números ímpares na cor verde e o pares na cor azul.</p>
+      <p>Formatados dentro de uma tabela HTML com 5 colunas e com o número de linhas suficiente para preencher todos os valores do intervalo. Ao Final, da impressão dos números apresente a diferença entre a soma dos números pares e ímpares</p>
+
+    </div>
+  </section> -->
+
+</body>
+</html>

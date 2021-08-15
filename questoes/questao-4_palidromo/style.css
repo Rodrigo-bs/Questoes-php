@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+label,
+input,
+button {
+    display: block;
+}
+
+form {
+    width: 500px;
+    border: 1px solid #f1f2f9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    padding:  30px 50px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 650;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    padding: 3px;
+    outline: none;
+    margin: 10px 0 20px 0;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}

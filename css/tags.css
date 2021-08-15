@@ -1,0 +1,19 @@
+.code {
+    padding: 15px;
+    background: #2A2C37;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+string-php {
+    color: #FFFF6B;
+}
+
+metodo-php {
+    color: #11A9CB;
+}
+
+.saida {
+    border: 1px solid #f1f2f9;
+}

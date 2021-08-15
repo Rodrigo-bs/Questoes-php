@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border: 1px solid #ddd;    
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(odd) {
+    background: #f3f3f4;
+}

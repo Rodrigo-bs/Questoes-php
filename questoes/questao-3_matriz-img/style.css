@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border: 1px solid #ddd;
+}
+
+table img {
+    max-width: 200px;
+    height: 150px;
+}
+
+html,
+body {
+    height: 100%; 
+    display: grid;
+    place-items: center;
+}
