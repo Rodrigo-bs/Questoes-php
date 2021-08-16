@@ -79,9 +79,16 @@ header .menu-nav li a {
     background: #f1f2f9;
 }
 
-.aviso {
+/* .aviso {
     color: rgb(208, 55, 38);
     background: rgba(238, 85, 68, 0.748);
     padding: 8px;
     border: 1px solid rgb(250, 166, 156);
+} */
+
+.aviso {
+    color: #32a89d; 
+    background: #91e3db;
+    padding: 8px;
+    border: 1px solid #32a89d;
 }

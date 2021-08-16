@@ -15,11 +15,10 @@ $imgs_arrays = [['img1.jpg', 'img2.jpg', 'img3.png'], ['img4.jpg', 'img5.jpg', '
     <table>
         <?php
             foreach ($imgs_arrays as $img_array) {
-
                 echo '<tr>';
                 foreach ($img_array as $img)
                     echo '<td><img src="./img/'.$img.'" title="'.$img.'"></td>';
-                echo '</tr>';
+                echo '</tr>'; 
             }
         ?>
     </table>

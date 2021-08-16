@@ -17,9 +17,9 @@
         <ul>
           <li><a href="#questao1">Questão 1</a></li>
           <li><a href="#questao2">Questão 2</a></li>
-          <li><a href="#">Questão 3</a></li>
-          <li><a href="#">Questão 4</a></li>
-          <li><a href="#">Questão 5</a></li>
+          <li><a href="#questao3">Questão 3</a></li>
+          <li><a href="#questao4">Questão 4</a></li>
+          <li><a href="#questao5">Questão 5</a></li>
         </ul>
       </nav>
     </div>
@@ -50,7 +50,8 @@
       <p>Saida: </p>
       <img src="./img/ex-var-1.PNG" alt="img-saida-var1" class="saida">
 
-      <p>Agora que temos as linhas, basta que em cada uma delas possamos aplicar o explode() e formar dentro de uma tabela, faremos isso usando o foreach(). </p>
+      <p>Note que temos um array como retorno, nele está contido todas as divisões efetuadas.</p>
+      <p>Agora que temos as linhas, basta que em cada uma delas aplicar o explode() novamente e mostrar dentro de uma tabela o resultado, faremos isso usando o foreach().</p>
 
       <div class="code-variavel">
         <div class="code">
@@ -83,7 +84,7 @@
         <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
-      <p>Já em outro arquivo com o nome de "lista.php", vamos resgatar esses valores e realizar a verificação.</p>
+      <p>Já em outro arquivo com o nome de "lista.php", vamos resgatar esses valores e realizar a verificação se o valor inicial é maior que o valor final, caso ele seja, vamos parar a execução do nosso script.</p>
       <div class="code-variavel">
         <div class="code">
           <img src="./img/q2-ex2.PNG" alt="img-exemplo-q2">
@@ -92,7 +93,7 @@
         <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
-      <p>Agora basta obter o valor de linhas necessárias para preencher a tabela, para isso devemos subtrair o valor final pelo valor inicial e dividir pelo número de colunas.</p>
+      <p>Agora basta obter o valor de linhas necessárias para preencher a tabela, para isso devemos subtrair o valor final pelo valor inicial e dividir pelo número de colunas, que nesse caso é 5.</p>
       <div class="code-variavel">
         <div class="code">
           <img src="./img/q2-ex3.PNG" alt="img-exemplo-q2">
@@ -111,7 +112,7 @@
         <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
-      <p>Agora basta fazer a fazer a verificação se o número é par ou ímpar e imprimi-lo com a respectiva cor.</p>
+      <p>Agora basta fazer a fazer a verificação se o número é par ou ímpar e imprimi-lo dentro da sua célula com sua respectiva cor.</p>
       <p class="aviso">Lembrando que para sabermos se um número é par basta verificar se o resto da divisão por 2 é igual a 0.</p>
 
       <div class="code-variavel">
@@ -126,8 +127,67 @@
       <img src="./img/ex-inter-1.PNG" class="saida">
       <p>Perceba que o intervalo de 10 a 50 é 11, 12, 13..., 48 e 49.</p>
     </div>
-
   </section>
 
+  <section class="questao-3 questoes" id="questao3">
+    <div class="container">
+      <h1>Questão 3</h1>
+      <p>Baseado em uma matriz $img com 3 linhas e 3 colunas, a qual consta nomes de arquivos de imagens os quais estão fisicamente armazenados no diretório ‘imagens/’ crie uma página em Linguagem PHP que leia a matriz $img e mostre as imagens na página organizando em uma tabela HTML.</p>
+      
+      <div class="code-variavel">
+        <div class="code">
+          <pre>$img = [[<string-php>‘img1.jpg', ‘img2.jpg', ‘img3.jpg'</string-php>], [<string-php>‘img4.jpg', ‘img5.jpg', ‘img6.jpg'</string-php>], [<string-php>‘img7.jpg', ‘img8.jpg', ‘img9.jpg'</string-php>]]; </pre>
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>O problema que nós fomos apresentados é bem fácil de se resolver, vamos achar nove imagens e renomear cada uma para os respectivos nomes que contam na matriz. (Obs: fique de olho na extenção da imagem!!!)</p>
+      <img src="./img/q3-ex1.PNG" >
+
+      <p>Agora basta criarmos um loop que passará pela matriz $img.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q3-ex2.PNG">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Saida:</p>
+      <img src="./img/ex-var-4.PNG" class="saida">
+
+      <p>Como podemos ver, já temos as linhas da nossa tabela, agora basta que possamos percorrer por cada array que está contido dentro da nossa variável $img, após isso vamos usar um echo para imprimir nossas imagens.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q3-ex3.PNG">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Teremos esse resultado: </p>
+      <img src="./img/ex-var-5.PNG">
+    </div>
+  </section>
+
+  <section class="questao-4 questoes" id="questao4">
+    <div class="container">
+      <h1>Questão 4</h1>
+      <p>Existem numerosas frases que são palíndromos quando o espaçamento é ignorado. Exemplos incluem "A grama é amarga" e “Anotaram a data da maratona", entre muitos outros. Baseado em um formulário HTML que tem um campo de entrada do tipo (text) tendo o nome do campo: ‘frase’, o qual receberá do usuário uma frase. Escreva uma página com código de Linguagem PHP que recupere esta frase e ignore os espaçamentos para determinar se a frase é ou não um palíndromo. Considere que o usuário não digitará sinais de pontuação, entretanto, e letras em maiúsculas e letras minúsculas devem ser equalizadas. Frases palíndromos são frase de lidas de frente para trás e de trás para frente formam as mesmas frases.</p>
+
+      <p>Nessa questão iremos usar uma abordagem diferente. Vamos usar orientação a objeto.</p>
+      <p>Iniciaremos criando um arquivo com o nome de “palidromo.class.php”, dentro dele terá uma classe com o nome de “Palidromo", nessa classe teremos 5 métodos que serão responsáveis por realizar as ações necessárias, e é claro o nosso método construtor. São eles:</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q4-ex1.PNG">
+        </div>
+
+        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p></p>
+    </div>
+  </section>
 </body>
 </html>
