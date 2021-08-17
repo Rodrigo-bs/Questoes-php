@@ -3,6 +3,10 @@
 $a = 'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web';
 $linhas = explode('*', $a);
 
+echo '<pre>';
+print_r($linhas);
+echo '</pre>';
+
 ?>
 
 <!DOCTYPE html>

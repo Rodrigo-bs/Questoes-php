@@ -1,3 +1,26 @@
+<!-- 
+──────────▄─────
+────────▄▀▄▀────
+──────▄▀▄▀──────
+────▄▀▄▀────────
+──▄▀▄▀──────────
+─▀▄▀▄───────────
+───▀▄▀▄───▄─────
+─────▀──▄▀▄▀▄───
+──────▄▀▄▀─▀▄▀▄─
+────▄▀▄▀──▄▀▄▀──
+──▄▀▄▀──▄▀▄▀────
+─▀▄▀▄─▄▀▄▀──────
+───▀▄▀▄▀──▄─────
+─────▀──▄▀▄▀────
+──────▄▀▄▀──────
+────▄▀▄▀────────
+──▄▀▄▀──────────
+─▀▄▀▄───────────
+───▀▄▀▄─────────
+─────▀──────────
+ -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,6 +47,15 @@
       </nav>
     </div>
   </header>
+
+  <section class="baixar-questoes container">
+    <a href="./questoes/questao-1_tratar-varialvel.rar">Baixar Questão - 1</a>
+    <a href="./questoes/questao-2_tabela-valores-intervalo.rar">Baixar Questão - 2</a>
+    <a href="./questoes/questao-3_matriz-img.rar">Baixar Questão - 3</a>
+    <a href="./questoes/questao-4_palidromo.rar">Baixar Questão - 4</a>
+    <a href="./questoes/questao-5_converter_moeda.rar">Baixar Questão - 5</a>
+    <a href="./questoes/questoes.rar">Baixar Todas as Questões</a>
+  </section>
   
   <section class="questao-1 questoes" id="questao1">
     <div class="container">
@@ -34,7 +66,7 @@
           <pre>$a = <string-php>'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web'</string-php>;</pre>
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Como está sendo sugerido na alternativa, devemos usar o método <a href="https://www.php.net/manual/en/function.explode.php">explode()</a> do php, vamos começar com o que ela faz. Essa função é responsável por dividir uma string em diferentes partes, determinada por um caractere divisor, o método leva dois argumentos sendo ambos do tipo string, esses argumentos são o caractere divisor e a string que será dividida.</p>
@@ -44,7 +76,7 @@
           <img src="./img/q1-ex1.PNG" alt="exemplo q1">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Saida: </p>
@@ -58,7 +90,7 @@
           <img src="./img/q1-ex2.PNG" alt="exemplo q1">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Saida: </p>
@@ -81,7 +113,7 @@
           <img src="./img/q2-ex1.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Já em outro arquivo com o nome de "lista.php", vamos resgatar esses valores e realizar a verificação se o valor inicial é maior que o valor final, caso ele seja, vamos parar a execução do nosso script.</p>
@@ -90,7 +122,7 @@
           <img src="./img/q2-ex2.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Agora basta obter o valor de linhas necessárias para preencher a tabela, para isso devemos subtrair o valor final pelo valor inicial e dividir pelo número de colunas, que nesse caso é 5.</p>
@@ -99,7 +131,7 @@
           <img src="./img/q2-ex3.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Tendo esse valor basta fazermos um loop pela variável $valorVoltas, dentro desse loop teremos outro, que será responsável por verificar se o último número mais 1 é menor que o valor da variável $valorFinal, assim garantindo que estaremos dentro do intervalo.</p>
@@ -109,7 +141,7 @@
           <img src="./img/q2-ex4.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Agora basta fazer a fazer a verificação se o número é par ou ímpar e imprimi-lo dentro da sua célula com sua respectiva cor.</p>
@@ -120,7 +152,7 @@
           <img src="./img/q2-ex5.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Aplicando o devido CSS e usando valores menores como exemplo, temos: </p>
@@ -139,7 +171,7 @@
           <pre>$img = [[<string-php>‘img1.jpg', ‘img2.jpg', ‘img3.jpg'</string-php>], [<string-php>‘img4.jpg', ‘img5.jpg', ‘img6.jpg'</string-php>], [<string-php>‘img7.jpg', ‘img8.jpg', ‘img9.jpg'</string-php>]]; </pre>
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>O problema que nós fomos apresentados é bem fácil de se resolver, vamos achar nove imagens e renomear cada uma para os respectivos nomes que contam na matriz. (Obs: fique de olho na extenção da imagem!!!)</p>
@@ -151,7 +183,7 @@
           <img src="./img/q3-ex2.PNG">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Saida:</p>
@@ -163,7 +195,7 @@
           <img src="./img/q3-ex3.PNG">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
       <p>Teremos esse resultado: </p>
@@ -183,11 +215,89 @@
           <img src="./img/q4-ex1.PNG">
         </div>
 
-        <button><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
       </div>
 
-      <p></p>
+      <p>Agora vamos usar a função str_replace(), strtolower() e strrev() para construir nossos métodos. o método construtor vai receber um argumento, esse argumento é o nosso palíndromo.</p>
+      <p>Primeiro temos duas variáveis privadas com o nome de $palavra e $palavraOriginal, uma guardara a palavra já sem espaços e sem maiúsculas, mas em sua ordem original, já a outra guardara a palavra na ordem contraria.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q4-ex2.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Agora vamos para os métodos.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q4-ex3.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>No método limparEspacos() é usado a função <a href="https://www.php.net/manual/en/function.str-replace.php">str_replace()</a>, essa função leva três argumentos, sendo eles o valor que está sendo buscado, o valor que será usado para substituir o valor buscado, e a string que será afetada.</p>
+      <p>No método limparMaiusculo() usamos a função <a href="https://www.php.net/manual/en/function.strtolower.php">strtolower()</a> para deixar tudo em minúsculas.</p>
+      <p>No método reverterString() usamos a função <a href="https://www.php.net/manual/en/function.strrev.php">strrev()</a> para reverter a string.</p>
+
+      <p>Agora vamos criar um arquivo chamado index.html com o nosso formulário de envio.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q4-ex4.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Por fim, vamos criar um arquivo chamado palidromo.php, nesse arquivo vamos incluir a nossa classe e fazer as verificações necessárias.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q4-ex5.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
     </div>
   </section>
+
+  <section class="questao-5 questoes" id="questao5">
+    <div class="container">
+      <h1>Questão 5</h1>
+      <p>Baseado no código HTML do formulário abaixo, crie uma página com código em linguagem PHP que recupere os dados enviados pelo formulário e gere uma página web de saída com as informações recuperadas, bem como, mostre quanto em dólares será possível comprar com as informações repassadas pelo usuário.</p>
+      <p>Primeiro vamos criar o index.html com o nosso formulário.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q5-ex1.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>Em um arquivo com o nome de pagina.php vamos garantir que o valor das moedas venha com o formato certo, trocando possíveis virgulas por pontos.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q5-ex2.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+
+      <p>No mesmo arquivo vamos mostrar para o usuário o resultado.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q5-ex3.PNG">
+        </div>
+
+        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h1>Feito por: Rodrigo da Silva Brito</h1>
+  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

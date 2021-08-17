@@ -38,6 +38,23 @@ header .menu-nav li a {
     margin: 0 5px;
 }
 
+.baixar-questoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.baixar-questoes a {
+    padding: 5px 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
 .questoes {
     margin-top: 20px;
 }
@@ -91,4 +108,12 @@ header .menu-nav li a {
     background: #91e3db;
     padding: 8px;
     border: 1px solid #32a89d;
+}
+
+footer {
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(95.29deg, #0A3871 0%, #051933 98.03%);
 }
