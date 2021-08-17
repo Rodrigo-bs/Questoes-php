@@ -96,6 +96,11 @@ header .menu-nav li a {
     background: #f1f2f9;
 }
 
+.code-variavel textarea {
+    display: none;
+}
+/* <textarea></textarea> */
+
 /* .aviso {
     color: rgb(208, 55, 38);
     background: rgba(238, 85, 68, 0.748);

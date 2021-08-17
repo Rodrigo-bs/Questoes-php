@@ -66,7 +66,10 @@
           <pre>$a = <string-php>'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web'</string-php>;</pre>
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          $a = 'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web';
+        </textarea>
       </div>
 
       <p>Como está sendo sugerido na alternativa, devemos usar o método <a href="https://www.php.net/manual/en/function.explode.php">explode()</a> do php, vamos começar com o que ela faz. Essa função é responsável por dividir uma string em diferentes partes, determinada por um caractere divisor, o método leva dois argumentos sendo ambos do tipo string, esses argumentos são o caractere divisor e a string que será dividida.</p>
@@ -76,7 +79,15 @@
           <img src="./img/q1-ex1.PNG" alt="exemplo q1">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          $a = 'código;php;linguagem*nota;ifac;aluno*professor;bimestre;prova*computador;programação;web';
+          $linhas = explode('*', $a);
+
+          echo '<pre>';
+          print_r($linhas);
+          echo '</pre>';
+        </textarea>
       </div>
 
       <p>Saida: </p>
@@ -90,7 +101,23 @@
           <img src="./img/q1-ex2.PNG" alt="exemplo q1">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <table>
+            <?php
+            
+            foreach ($linhas as $linha) {
+                $colunas = explode(';', $linha);
+            
+                echo '<tr>';
+                foreach ($colunas as $coluna)
+                    echo '<td>'.$coluna.'</td>';
+                echo '</tr>';
+            }
+    
+            ?>
+          </table>
+        </textarea>
       </div>
 
       <p>Saida: </p>
@@ -113,7 +140,21 @@
           <img src="./img/q2-ex1.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+          </head>
+          <body>
+              <a href="./lista.php?nr_i=30&nr_f=930">Clique aqui!!</a>
+          </body>
+          </html>
+        </textarea>
       </div>
 
       <p>Já em outro arquivo com o nome de "lista.php", vamos resgatar esses valores e realizar a verificação se o valor inicial é maior que o valor final, caso ele seja, vamos parar a execução do nosso script.</p>
@@ -122,7 +163,19 @@
           <img src="./img/q2-ex2.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <?php
+
+          $valorInicial = $_GET['nr_i'];
+          $valorFinal = $_GET['nr_f'];
+
+          if ($valorInicial > $valorFinal) {
+            die('<h1>O intervalo é inválido!</h1>');
+          } 
+
+          ?>
+        </textarea>
       </div>
 
       <p>Agora basta obter o valor de linhas necessárias para preencher a tabela, para isso devemos subtrair o valor final pelo valor inicial e dividir pelo número de colunas, que nesse caso é 5.</p>
@@ -131,7 +184,21 @@
           <img src="./img/q2-ex3.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <?php
+
+          $valorInicial = $_GET['nr_i'];
+          $valorFinal = $_GET['nr_f'];
+
+          if ($valorInicial > $valorFinal) {
+            die('<h1>O intervalo é inválido!</h1>');
+          } 
+
+          $valorVoltas = ($valorFinal - $valorInicial) / 5;
+
+          ?>
+        </textarea>
       </div>
 
       <p>Tendo esse valor basta fazermos um loop pela variável $valorVoltas, dentro desse loop teremos outro, que será responsável por verificar se o último número mais 1 é menor que o valor da variável $valorFinal, assim garantindo que estaremos dentro do intervalo.</p>
@@ -141,7 +208,23 @@
           <img src="./img/q2-ex4.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <table>
+            <?php
+                $ultimoNumero = $valorInicial;
+                for ($i = 0; $i < $valorVoltas; $i++) {
+                    echo '<tr>';
+                    for ($j = 0; $j < 5; $j++) {
+                        if ($ultimoNumero + 1 < $valorFinal)
+                            $ultimoNumero = $ultimoNumero + 1;
+                    }
+
+                    echo '</tr>';
+                }
+            ?>
+        </table>
+        </textarea>
       </div>
 
       <p>Agora basta fazer a fazer a verificação se o número é par ou ímpar e imprimi-lo dentro da sua célula com sua respectiva cor.</p>
@@ -152,7 +235,28 @@
           <img src="./img/q2-ex5.PNG" alt="img-exemplo-q2">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <table>
+            <?php
+                $ultimoNumero = $valorInicial;
+                for ($i = 0; $i < $valorVoltas; $i++) {
+                    echo '<tr>';
+                    for ($j = 0; $j < 5; $j++) {
+                        if ($ultimoNumero + 1 < $valorFinal) {
+                            $ultimoNumero = $ultimoNumero + 1;
+                            if ($ultimoNumero % 2 == 0) echo '<td class="par">'.$ultimoNumero.'</td>';  
+                            else echo '<td class="impar">'.$ultimoNumero.'</td>';
+                        } else {
+                            echo '<td>---</td>';
+                        }
+                    }
+
+                    echo '</tr>';
+                }
+            ?>
+        </table>
+        </textarea>
       </div>
 
       <p>Aplicando o devido CSS e usando valores menores como exemplo, temos: </p>
@@ -168,10 +272,13 @@
       
       <div class="code-variavel">
         <div class="code">
-          <pre>$img = [[<string-php>‘img1.jpg', ‘img2.jpg', ‘img3.jpg'</string-php>], [<string-php>‘img4.jpg', ‘img5.jpg', ‘img6.jpg'</string-php>], [<string-php>‘img7.jpg', ‘img8.jpg', ‘img9.jpg'</string-php>]]; </pre>
+          <pre>$img = [[<string-php>'img1.jpg', 'img2.jpg', 'img3.jpg'</string-php>], [<string-php>'img4.jpg', 'img5.jpg', 'img6.jpg'</string-php>], [<string-php>'img7.jpg', 'img8.jpg', 'img9.jpg'</string-php>]]; </pre>
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          $img = [['img1.jpg', 'img2.jpg', 'img3.jpg'], ['img4.jpg', 'img5.jpg', 'img6.jpg'], ['img7.jpg', 'img8.jpg', 'img9.jpg']]; 
+        </textarea>
       </div>
 
       <p>O problema que nós fomos apresentados é bem fácil de se resolver, vamos achar nove imagens e renomear cada uma para os respectivos nomes que contam na matriz. (Obs: fique de olho na extenção da imagem!!!)</p>
@@ -183,7 +290,18 @@
           <img src="./img/q3-ex2.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <table>
+          <?php
+              foreach ($imgs_arrays as $img_array) {
+                  echo '<tr>';
+                  print_r($img_array);
+                  echo '</tr>'; 
+              }
+          ?>
+        </table>
+        </textarea>
       </div>
 
       <p>Saida:</p>
@@ -195,7 +313,19 @@
           <img src="./img/q3-ex3.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <table>
+          <?php
+              foreach ($imgs_arrays as $img_array) {
+                  echo '<tr>';
+                  foreach ($img_array as $img)
+                      echo '<td><img src="./img/'.$img.'" title="'.$img.'"></td>';
+                  echo '</tr>'; 
+              }
+          ?>
+        </table>
+        </textarea>
       </div>
 
       <p>Teremos esse resultado: </p>
@@ -215,7 +345,35 @@
           <img src="./img/q4-ex1.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <?php
+
+            class Palidromo {
+
+                public function __construct($palavra) {
+
+                }
+
+                private function limparEspacos($p) {
+                }
+
+                private function limparMaiusculo($p) {
+                }
+
+                private function reverterString($p) {
+                }
+
+                public function limparString($p) {
+                }
+
+                public function comparar() {
+
+                }
+            }
+
+            ?>
+        </textarea>
       </div>
 
       <p>Agora vamos usar a função str_replace(), strtolower() e strrev() para construir nossos métodos. o método construtor vai receber um argumento, esse argumento é o nosso palíndromo.</p>
@@ -225,7 +383,38 @@
           <img src="./img/q4-ex2.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <?php
+
+          class Palidromo {
+              private $palavra;
+              private $palavraOriginal;
+
+              public function __construct($palavra) {
+                $this->palavra = $this->reverterString($this->limparString($palavra));
+              $this->palavraOriginal = $this->limparString($palavra);
+              }
+
+              private function limparEspacos($p) {
+              }
+
+              private function limparMaiusculo($p) {
+              }
+
+              private function reverterString($p) {
+              }
+
+              public function limparString($p) {
+              }
+
+              public function comparar() {
+
+              }
+          }
+
+          ?>
+        </textarea>
       </div>
 
       <p>Agora vamos para os métodos.</p>
@@ -234,7 +423,49 @@
           <img src="./img/q4-ex3.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <?php
+
+        class Palidromo {
+            private $palavra;
+            private $palavraOriginal;
+
+            public function __construct($palavra) {
+                $this->palavra = $this->reverterString($this->limparString($palavra));
+                $this->palavraOriginal = $this->limparString($palavra);
+            }
+
+            private function limparEspacos($p) {
+                $palavra = str_replace(' ', '', $p);
+                return $palavra;
+            }
+
+            private function limparMaiusculo($p) {
+                $palavra = strtolower($p);
+                return $palavra;
+            }
+
+            private function reverterString($p) {
+                $palavra = strrev($p);
+                return $palavra;
+            }
+
+            public function limparString($p) {
+                $palavra = $this->limparEspacos($p);
+                $palavra = $this->limparMaiusculo($palavra);
+
+                return $palavra;
+            }
+
+            public function comparar() {
+                if ($this->palavra === $this->palavraOriginal) return 1;
+                else return 0;
+            }
+        }
+
+        ?>
+        </textarea>
       </div>
 
       <p>No método limparEspacos() é usado a função <a href="https://www.php.net/manual/en/function.str-replace.php">str_replace()</a>, essa função leva três argumentos, sendo eles o valor que está sendo buscado, o valor que será usado para substituir o valor buscado, e a string que será afetada.</p>
@@ -247,7 +478,26 @@
           <img src="./img/q4-ex4.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./style.css">
+            <title>Document</title>
+          </head>
+          <body>
+            <form action="./palidromo.php" method="GET">
+              <label for="frase">Frase: </label>
+              <input type="text" name="frase" id="frase">
+              <button type="submit">Enviar</button>
+            </form>
+          </body>
+          </html>
+        </textarea>
       </div>
 
       <p>Por fim, vamos criar um arquivo chamado palidromo.php, nesse arquivo vamos incluir a nossa classe e fazer as verificações necessárias.</p>
@@ -256,7 +506,43 @@
           <img src="./img/q4-ex5.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <?php
+
+        include './palidromo.class.php';
+
+        ?>
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./style.css">
+            <title>Document</title>
+        </head>
+        <body>
+            <?php
+            
+            if (isset($_GET['frase'])) {
+                $palavra = $_GET['frase'];
+            
+                $palidromo = new Palidromo($palavra);
+                if ($palidromo->comparar()) {
+                    echo '<h1>A Frase "'.$palavra.'" Forma um Palídromo.</h1>';
+                } else {
+                    echo '<h1>A Frase "'.$palavra.'" Não Forma um Palídromo.</h1>';
+                }
+            } else {
+                echo '<h1>Frase não encontrada, volte para <a href="index.html">Home</a></h1>';
+            }
+            
+            ?>
+        </body>
+        </html>
+        </textarea>
       </div>
     </div>
   </section>
@@ -271,7 +557,27 @@
           <img src="./img/q5-ex1.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy"><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+            <form action="pagina.php" method="GET">
+              <label for="real">Digite o valor em Real (R$): </label>
+              <input type="text" name="real" id="real">
+              <label for="dolar">Digite o valor em Dolar ($): </label>
+              <input type="text" name="dolar" id="dolar">
+              <button type="submit">Enviar</button>
+            </form>
+          </body>
+          </html>
+        </textarea>
       </div>
 
       <p>Em um arquivo com o nome de pagina.php vamos garantir que o valor das moedas venha com o formato certo, trocando possíveis virgulas por pontos.</p>
@@ -280,7 +586,14 @@
           <img src="./img/q5-ex2.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <?php    
+        $valorReal = str_replace(',', '.', $_GET['real']);
+        $valorDolar = str_replace(',', '.', $_GET['dolar']);
+
+        ?>
+        </textarea>
       </div>
 
       <p>No mesmo arquivo vamos mostrar para o usuário o resultado.</p>
@@ -289,7 +602,38 @@
           <img src="./img/q5-ex3.PNG">
         </div>
 
-        <button class="button-copy" label-copy=""><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg"></button>
+        <textarea>
+        <?php    
+        $valorReal = str_replace(',', '.', $_GET['real']);
+        $valorDolar = str_replace(',', '.', $_GET['dolar']);
+
+        ?>
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./style.css">
+            <title>Document</title>
+        </head>
+        <body>
+            <table>
+                <tr>
+                    <th>Valor em R$</th>
+                    <th>Cotação</th>
+                    <th>valor em Dolar</th>
+                </tr>
+                <tr>
+                    <td><?=$valorReal?></td>
+                    <td><?=$valorDolar?></td>
+                    <td><?=number_format($valorReal / $valorDolar, 2)?></td>
+                </tr>
+            </table>
+        </body>
+        </html>
+        </textarea>
       </div>
     </div>
   </section>
