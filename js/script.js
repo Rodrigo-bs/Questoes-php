@@ -1,21 +1,44 @@
 const buttons = document.querySelectorAll('.button-copy');
-console.log('ola');
+
 function copiarText(text) {
   let textarea = text.querySelector('textarea');
-
+  
   textarea.select();
   textarea.setSelectionRange(0, 99999);
-
+  
   navigator.clipboard.writeText(textarea.value);
-  window.alert('Copia Efetuada com Sucesso!!');
+}
+
+function ativarButton(button) {
+  const img = button.querySelector('img');
+  const imgs = document.querySelectorAll('.button-copy img');
+
+  imgs.forEach(img => {
+    img.src = './img/Vector.svg';
+  })
+
+  img.src = './img/copiar-ativo.svg';
 }
 
 function pegarValor({ currentTarget }) {
   let text = currentTarget.parentNode;
-  let status = copiarText(text);
-  console.log(status);
+  ativarButton(currentTarget);
+  copiarText(text);
 }
 
 buttons.forEach(button => {
   button.addEventListener('click', pegarValor)
 })
+
+//Voltar
+
+const voltarButton = document.querySelector('.voltar');
+
+function voltarTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+voltarButton.addEventListener('click', voltarTop);

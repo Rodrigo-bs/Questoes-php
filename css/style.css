@@ -7,6 +7,10 @@
     font-family: 'Nunito';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -90,6 +94,7 @@ header .menu-nav li a {
     cursor: pointer;
     margin-left: 10px;
     max-height: 49px;
+    transition: .2s;
 }
 
 .code-variavel button:hover {
@@ -115,10 +120,52 @@ header .menu-nav li a {
     border: 1px solid #32a89d;
 }
 
+.voltar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.voltar img {
+    width: 20px;
+}
+
 footer {
     width: 100%;
     color: #fff;
     padding: 10px;
     text-align: center;
     background: linear-gradient(95.29deg, #0A3871 0%, #051933 98.03%);
+    font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+    header .container {
+        justify-content: center;
+    }
+
+    header .menu-nav {
+        display: none;
+    }
+
+    .code {
+        padding: 10px !important;
+    }
+
+    .code {
+        overflow-x: auto;
+    }
+
+    .saida {
+        max-width: 400px;
+    }
 }
