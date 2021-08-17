@@ -1,14 +1,13 @@
 const buttons = document.querySelectorAll('.button-copy');
-
+console.log('ola');
 function copiarText(text) {
   let textarea = text.querySelector('textarea');
-  textarea.focus();
+
   textarea.select();
+  textarea.setSelectionRange(0, 99999);
 
-  let command = document.execCommand('copy');
-
-  if (command) return 1;
-  else return 0;
+  navigator.clipboard.writeText(textarea.value);
+  window.alert('Copia Efetuada com Sucesso!!');
 }
 
 function pegarValor({ currentTarget }) {
