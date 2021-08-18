@@ -262,6 +262,94 @@
       <p>Aplicando o devido CSS e usando valores menores como exemplo, temos: </p>
       <img src="./img/ex-inter-1.PNG" class="saida">
       <p>Perceba que o intervalo de 10 a 50 é 11, 12, 13..., 48 e 49.</p>
+
+      <p>Agora basta calcularmos o valor da soma dos pares, dos ímpares e a diferença entre eles.</p>
+      <p>Para isso vamos criar duas variáveis com o nome de $totalImpar e $totalPar.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex6-extra.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg" title="Copiar"></button>
+        <textarea>
+          <?php
+
+          $valorInicial = $_GET['nr_i'];
+          $valorFinal = $_GET['nr_f'];
+
+          if ($valorInicial > $valorFinal) {
+            die('<h1>O intervalo é inválido!</h1>');
+          } 
+
+          $valorVoltas = ($valorFinal - $valorInicial) / 5;
+
+          $totalPar = 0;
+          $totalImpar = 0;
+
+          ?>
+        </textarea>
+      </div>
+
+      <p>Agora basta obtermos o valor da soma.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex7-extra.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg" title="Copiar"></button>
+        <textarea>
+          <table class="tabela">
+            <?php
+                $ultimoNumero = $valorInicial;
+                for ($i = 0; $i < $valorVoltas; $i++) {
+                    echo '<tr>';
+                    for ($j = 0; $j < 5; $j++) {
+                        if ($ultimoNumero + 1 < $valorFinal) {
+                            $ultimoNumero = $ultimoNumero + 1;
+                            if ($ultimoNumero % 2 == 0) {
+                                echo '<td class="par">'.$ultimoNumero.'</td>';
+                                $totalPar += $ultimoNumero;
+                            }  
+                            else {
+                                echo '<td class="impar">'.$ultimoNumero.'</td>';
+                                $totalImpar += $ultimoNumero;
+                            }
+                        } else {
+                            echo '<td>---</td>';
+                        }
+                    }
+
+                    echo '</tr>';
+                }
+            ?>
+          </table>
+        </textarea>
+      </div>
+      <p>Agora vamos mostrar na tela.</p>
+      <div class="code-variavel">
+        <div class="code">
+          <img src="./img/q2-ex8-extra.PNG" alt="img-exemplo-q2">
+        </div>
+
+        <button class="button-copy" ><img src="./img/Vector.svg" alt="Cooy-svg" title="Copiar"></button>
+        <textarea>
+          <table>
+            <?php
+            
+            echo 
+                '<tr>
+                    <td>Soma Pares: '.$totalPar.'</td>
+                    <td>Soma Ímpares: '.$totalImpar.'</td>
+                    <td>Diferença Entre eles: '.($totalImpar - $totalPar).'</td>
+                </tr>';
+
+            ?>
+          </table>
+        </textarea>
+      </div>
+
+      <p>Saida: </p>
+      <img src="./img/ex-var-6.PNG" class="saida">
     </div>
   </section>
 
